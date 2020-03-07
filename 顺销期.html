@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+		<script>
+			$(function() {
+				
+			})
+		</script>
+	</head>
+
+	<body class="indexbg">
+		<div class="modal fade" id="myModaltip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">页面说明</h4>
+					</div>
+					<div class="modal-body">
+						<div class="tipcont">这里显示关于页面的具体说明，这里显示关于页面的具体说明，这里显示关于页面的具体说明，这里显示关于页面的具体说明。</div>
+					</div>
+					<div class="modal-footer text-center">
+						<button type="button" class="btn btn-danger1" data-dismiss="modal">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="toplogo" onclick="window.location.href='index.html'"></div>
+			<div class="topmenu2">
+				<div class="tit">营销佣金管理系统</div>
+			</div>
+			<ul class="topright">
+				<li class="popli"><span><span class="iconfont icon-topicon04"></span>操作指南</span>
+				</li>
+				<li class="popli"><span><span class="iconfont icon-topicon03"></span>常见问题</span>
+				</li>
+				<li data-toggle="modal" data-target="#gglist" class="mesli"><span><span class="iconfont icon-topicon05"></span>通知公告</span><i>999</i></li>
+				<li class="popli"><span><span class="iconfont icon-topicon02"></span>问题反馈</span>
+				</li>
+				<li class="userli"><span>【欢迎您，管理员】</span><a href="###" title="退出"><span class="iconfont icon-topicon01"></span></a></li>
+			</ul>
+		</div>
+		<div class="allmain imain clearfix">
+			<!--左侧 start-->
+			<div class="leftmenu">
+				<div class="contscorll mCustomScrollbar leftscrollbar">
+					<div class="leftarrow"><span class="larrow"></span></div>
+					<div class="lmlist">
+						<ul>
+							<li>
+								<a href="index.html" title="首页"><span class="iconfont icon-lfi042"></span><b>首页</b></a>
+							</li>
+							<li>
+								<a href="蓄客期.html" title="蓄客期"><span class="iconfont icon-lfi053"></span><b>蓄客期</b></a>
+							</li>
+							<li>
+								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
+							</li>
+							<li>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+							</li>
+							<li>
+								<a href="###" title="顺销期" class="active"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+							</li>
+							<li>
+								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--左侧 end-->
+			<div class="fright clearfix">
+				<div class="pagetab clearfix">
+					<div class="pt-item">交房<button type="button" class="close"><span>&times;</span></button></div>
+				</div>
+				<div class="mynavtab01 clearfix">
+					<ul class="nav nav-tabs font14">
+						<li class="active"><a href="###" data-toggle="tab">发生佣金政策调整</a></li>
+					</ul>
+					<div class="tab-pane active clearfix">
+						<div class="mylist">
+							<div class="col-xs-4">
+								<div class="haslink02 outlink" data-target="#myModaltip" data-toggle="modal">
+									<span class="iconfont icon-lfi011"></span><a href="###" title="调整佣金政策" class="fontlink">1.调整佣金政策</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金方案创建.html'">
+									<span class="iconfont icon-lfi038"></span><a href="###" title="编制新版本佣金方案" class="fontlink">2.编制新版本佣金方案</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金方案.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金方案审批" class="fontlink">3.佣金方案审批</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金计算.html'">
+									<span class="iconfont icon-lfi038"></span><a href="###" title="创建佣金计算" class="fontlink">4.创建佣金计算</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金计算单.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金计算查询及审批" class="fontlink">5.佣金计算查询及审批</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金结算审批及发放" class="fontlink">6.佣金结算审批及发放</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs font14">
+						<li class="active"><a href="###" data-toggle="tab">发生退换房业务</a></li>
+					</ul>
+					<div class="tab-pane active clearfix">
+						<div class="mylist">
+							<div class="col-xs-4">
+								<div class="haslink02 outlink" data-target="#myModaltip" data-toggle="modal">
+									<span class="iconfont icon-lfi036"></span><a href="###" title="退换房申请（SAP销售系统）" class="fontlink">1.退换房申请（SAP销售系统）</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金追回详单.html'">
+									<span class="iconfont icon-lfi038"></span><a href="###" title="创建追回佣金" class="fontlink">2.创建追回佣金</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金计算单.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金计算查询及审批" class="fontlink">3.佣金计算查询及审批</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单创建.html'">
+									<span class="iconfont icon-lfi038"></span><a href="###" title="创建佣金结算" class="fontlink">4.创建佣金结算</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金结算查询及审批" class="fontlink">5.佣金结算查询及审批</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs font14">
+						<li class="active"><a href="###" data-toggle="tab">人员异动</a></li>
+					</ul>
+					<div class="tab-pane active clearfix">
+						<div class="mylist">
+							<div class="col-xs-4">
+								<div class="haslink02 outlink" data-target="#myModaltip" data-toggle="modal">
+									<span class="iconfont icon-lfi028"></span><a href="###" title="HR佣金发放（HR系统）" class="fontlink">1.HR佣金发放（HR系统）</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 outlink" data-target="#myModaltip" data-toggle="modal">
+									<span class="iconfont icon-lfi016"></span><a href="###" title="财务签收记帐（核算系统）" class="fontlink">2.财务签收记帐（核算系统）</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金计算.html'">
+									<span class="iconfont icon-lfi008"></span><a href="###" title="计算佣金" class="fontlink">3.计算佣金</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金计算单.html'">
+									<span class="iconfont icon-lfi008"></span><a href="###" title="离职人员佣金分配" class="fontlink">4.离职人员佣金分配</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi008"></span><a href="###" title="佣金结算和发放" class="fontlink">5.佣金结算和发放</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs font14">
+						<li class="active"><a href="###" data-toggle="tab">佣金结算发放</a></li>
+					</ul>
+					<div class="tab-pane active clearfix">
+						<div class="mylist">
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi008"></span><a href="###" title="根据业务需求随时结算佣金" class="fontlink">1.根据业务需求随时结算佣金</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi050"></span><a href="###" title="佣金审批" class="fontlink">2.佣金审批</a>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="haslink02 inlink" onclick="window.location.href='内部佣金-佣金结算单查询.html'">
+									<span class="iconfont icon-lfi008"></span><a href="###" title="佣金发放" class="fontlink">3.佣金发放</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

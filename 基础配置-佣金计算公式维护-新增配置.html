@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/kendo.common.min.css" />
+		<link rel="stylesheet" href="css/kendo.rtl.min.css" />
+		<link rel="stylesheet" href="css/kendo.mobile.all.min.css" />
+		<link rel="stylesheet" href="css/kendo.silver.min.css" />
+		<link rel="stylesheet" href="css/style-kendo.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="js/kendo.all.min.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+		<script type="text/javascript" src="js/formula.js"></script>
+
+		<script>
+
+			$(function() {
+$("#grid").kendoGrid({
+			scrollable:true,
+		    dataSource: {
+		    	data: [
+		       		{ id: "1", a1: "西南", a2: "本次应发佣金", a3: "=（可结佣金额*(佣金基础点位*点位调整）)*佣金浮动系数-（可结佣金额*(佣金基础点位*点位调整）)*佣金浮动系数+奖惩金额）*预留系数+奖惩金额", a4: "", a5: "xxx", a6: "2019-12-01"},
+		    	],
+		    	pageSize: 2,
+		    },
+		    columns: [
+		    	{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px' },
+		    	{ field: "a1", title: "区域" },
+		    	{ field: "a2",title:"计算类型" },
+		    	{ field: "a3",title:"佣金计算公式",width:'500px' },
+		    	{ field: "a4",title:"备注" },
+		    	{ field: "a5",title:"创建人" },
+		    	{ field: "a6",title:"创建日期" },
+		    ],
+		    pageable: {        //表格分页
+		        refresh: true, //刷新
+		    },
+		});
+	
+				})
+			</script>
+
+	</head>
+
+	<body class="indexbg">
+		
+		<div class="modal fade" id="modalFormula" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document" style="width:90%;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">配置公式</h4>
+					</div>
+					<div class="modal-body">
+						<div class="formulaBtndiv">
+							<div class="btndiv"><button class="btn btn-gray btn-sm" data-act="ins" data-target="pth1"> 添加 ( </button><button class="btn btn-gray btn-sm" data-act="del" data-target="pth1"> 删除 ( </button>
+							</div>
+							<div class="btndiv"><button class="btn btn-gray btn-sm" data-act="ins" data-target="item">添加元素</button><button class="btn btn-gray btn-sm" data-act="del" data-target="item">删除元素</button>
+							</div>
+							<div class="btndiv"><button class="btn btn-gray btn-sm" data-act="ins" data-target="pth2"> 添加 ) </button><button class="btn btn-gray btn-sm" data-act="del" data-target="pth2"> 删除 ) </button>
+							</div>
+						</div>
+						<div class="formulatips">选中元素后，可以进行添加()、删除()、添加元素、删除元素的操作。</div>
+						<div class="inputdiv form-horizontal" style="max-height:300px;overflow: auto;">
+		
+							<div class="form-group formulaCont">
+								<div class="item item0 active">
+									<div class="ldiv">=</div>
+									<div class="pth1"></div>
+									<div class="elem">
+										<select class="form-control">
+											<option value="0">选择元素</option>
+											<option value="1">可结佣金额</option>
+											<option value="2">佣金基础点位</option>
+											<option value="3">佣金浮动系数</option>
+											<option value="4">奖惩金额</option>
+											<option value="5">预留系数</option>
+											<option value="6">点位调整</option>
+										</select>
+									</div>
+									<div class="pth2"></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="resultdiv">=（<span>可结佣金额</span>*(<span>佣金基础点位</span>*<span>点位调整</span>）)*<span>佣金浮动系数</span>-（<span>可结佣金额</span>*(<span>佣金基础点位</span>*<span>点位调整</span>）)*<span>佣金浮动系数</span>+<span>奖惩金额</span>）*<span>预留系数</span>+<span>奖惩金额</span></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger1" data-dismiss="modal">确认</button>
+						<button type="button" class="btn btn-gray" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加便式</h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv">
+							<div class="form-group">
+								<label>请输入想要添加的便式</label>
+								<input type="text" class="form-control" placeholder="最多输入10个字符" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer text-center">
+						<button type="button" class="btn btn-danger1" id="saveit">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv form-inline ml20">
+							<div class="form-group">
+								<label class="mr15"></label>
+								<input type="text" class="form-control mr15 w230px" placeholder="请输入" />
+								<button class="btn btn-primary">搜索</button>
+							</div>
+							<ul class="zlist01">
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="toplogo" onclick="window.location.href='index.html'"></div>
+			<div class="topmenu2">
+				<div class="tit">营销佣金管理系统</div>
+			</div>
+			<ul class="topright">
+				<li class="popli"><span><span class="iconfont icon-topicon04"></span>操作指南</span>
+				</li>
+				<li class="popli"><span><span class="iconfont icon-topicon03"></span>常见问题</span>
+				</li>
+				<li data-toggle="modal" data-target="#gglist" class="mesli"><span><span class="iconfont icon-topicon05"></span>通知公告</span><i>999</i></li>
+				<li class="popli"><span><span class="iconfont icon-topicon02"></span>问题反馈</span>
+				</li>
+				<li class="userli"><span>【欢迎您，管理员】</span><a href="###" title="退出"><span class="iconfont icon-topicon01"></span></a></li>
+			</ul>
+		</div>
+		<div class="allmain imain clearfix">
+			<!--左侧 start-->
+			<div class="leftmenu">
+				<div class="contscorll mCustomScrollbar leftscrollbar">
+					<div class="leftarrow"><span class="larrow"></span></div>
+					<div class="lmlist">
+						<ul>
+							<li>
+								<a href="index.html" title="首页"><span class="iconfont icon-lfi042"></span><b>首页</b></a>
+							</li>
+							<li>
+								<a href="蓄客期.html" title="蓄客期" class="active"><span class="iconfont icon-lfi053"></span><b>蓄客期</b></a>
+							</li>
+							<li>
+								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
+							</li>
+							<li>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+							</li>
+							<li>
+								<a href="顺销期.html" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+							</li>
+							<li>
+								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--左侧 end-->
+			<div class="fright clearfix">
+				<div class="pagetab clearfix">
+					<div class="pt-item">佣金计算公式维护<button type="button" class="close"><span>&times;</span></button></div>
+				</div>
+				<div class="mynavtab01 clearfix">
+					<div class="btndiv_top">
+						<a href="基础配置-佣金计算公式维护.html" class="btn btn-gray">取消</a><a href="###" class="btn btn-gray">编辑</a><a href="基础配置-佣金计算公式维护.html"
+						 class="btn btn-danger1">保存</a>
+					</div>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">基础信息</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-pane active clearfix">
+						<div class="inputdiv clearfix">
+							<div class="form-horizontal clearfix col5">
+								<div class="subitem">
+									<label class="control-label"><span class="fontred0">*</span>区域</label>
+									<div class="control-cont">
+										<select class="form-control">
+											<option value=""></option>
+										</select>
+									</div>
+								</div>
+								<div class="subitem">
+									<label class="control-label">计算类型</label>
+									<div class="control-cont">
+										<select class="form-control">
+											<option value=""></option>
+										</select>
+									</div>
+								</div>
+								<div class="subitem">
+									<label class="control-label">创建人</label>
+									<div class="control-cont">
+										<input type="text" class="form-control" placeholder="请输入" value="" disabled="disabled" />
+									</div>
+								</div>
+								<div class="subitem">
+									<label class="control-label">创建时间</label>
+									<div class="control-cont">
+										<input type="text" class="form-control" placeholder="请输入" value="" disabled="disabled" />
+									</div>
+								</div>
+								<div class="subitem subitem3">
+									<label class="control-label">备注</label>
+									<div class="control-cont">
+										<textarea rows="3" class="form-control"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Tab panes -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">计算公式信息</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-pane active clearfix">
+						<div class="rulediv">
+							<div class="rule_cont">
+								<div class="clearfix mt10">
+									<label class="col-xs-12">佣金计算公式</label>
+								</div>
+								<div class="rule_item clearfix">
+									<div class="col-xs-2"><input type="text" class="form-control" readonly="readonly" value="本次应发佣金" /></div>
+									<div class="col-xs-10"><input type="text" class="form-control formulaIn" readonly="readonly" value="=（（可结佣金额*(佣金基础点位*点位调整）)*佣金浮动系数+奖惩金额）*（1-预留系数）" data-toggle="modal" data-target="#modalFormula" /></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

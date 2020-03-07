@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+		<script>
+			$(function() {
+				
+			})
+		</script>
+	</head>
+
+	<body class="indexbg">
+		
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加便式</h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv">
+							<div class="form-group">
+								<label>请输入想要添加的便式</label>
+								<input type="text" class="form-control" placeholder="最多输入10个字符" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer text-center">
+						<button type="button" class="btn btn-danger1" id="saveit">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv form-inline ml20">
+							<div class="form-group">
+								<label class="mr15"></label>
+								<input type="text" class="form-control mr15 w230px" placeholder="请输入" />
+								<button class="btn btn-primary">搜索</button>
+							</div>
+							<ul class="zlist01">
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="toplogo" onclick="window.location.href='index.html'"></div>
+			<div class="topmenu2">
+				<div class="tit">营销佣金管理系统</div>
+			</div>
+			<ul class="topright">
+				<li class="popli"><span><span class="iconfont icon-topicon04"></span>操作指南</span>
+				</li>
+				<li class="popli"><span><span class="iconfont icon-topicon03"></span>常见问题</span>
+				</li>
+				<li data-toggle="modal" data-target="#gglist" class="mesli"><span><span class="iconfont icon-topicon05"></span>通知公告</span><i>999</i></li>
+				<li class="popli"><span><span class="iconfont icon-topicon02"></span>问题反馈</span>
+				</li>
+				<li class="userli"><span>【欢迎您，管理员】</span><a href="###" title="退出"><span class="iconfont icon-topicon01"></span></a></li>
+			</ul>
+		</div>
+		<div class="allmain imain clearfix">
+			<!--左侧 start-->
+			<div class="leftmenu">
+				<div class="contscorll mCustomScrollbar leftscrollbar">
+					<div class="leftarrow"><span class="larrow"></span></div>
+					<div class="lmlist">
+						<ul>
+							<li>
+								<a href="index.html" title="首页"><span class="iconfont icon-lfi042"></span><b>首页</b></a>
+							</li>
+							<li>
+								<a href="蓄客期.html" title="蓄客期" class="active"><span class="iconfont icon-lfi053"></span><b>蓄客期</b></a>
+							</li>
+							<li>
+								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
+							</li>
+							<li>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+							</li>
+							<li>
+								<a href="顺销期.html" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+							</li>
+							<li>
+								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--左侧 end-->
+			<div class="fright clearfix">
+
+
+				<div class="pagetab clearfix">
+					<div class="pt-item">会计凭证预览<button type="button" class="close"><span>&times;</span></button></div>
+				</div>
+				<div class="mynavtab01 clearfix">
+					<div class="searlist-title mb0 clearfix">
+						<div class="btndiv"><button type="button" class="btn btn-gray" onclick="window.location.href='展厅收款和开票-收款签收-收款签收界面.html'">返回</button><button
+							 type="button" class="btn btn-danger1">检查</button></div>
+					</div>
+
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">凭证抬头</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active clearfix">
+							<div class="seardiv clearfix">
+								<div class="form-horizontal clearfix col4">
+									<div class="subitem level1">
+										<label class="control-label">凭证日期</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="2019-11-12" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">公司代码</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">货币</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">预制凭证号</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">制单人</label>
+										<div class="control-cont">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">过账日期</label>
+										<div class="control-cont">
+											<input type="text" class="form-control" placeholder="请输入" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">凭证类型</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">汇率</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">sap凭证号</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">过账人</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">期间</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">业务类型</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">附件张数</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">融创凭证号</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+									<div class="subitem subitem3">
+										<label class="control-label">抬头文本</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="XXX" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">借贷平衡检查</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active clearfix">
+							<div class="seardiv clearfix">
+								<div class="form-horizontal clearfix col4">
+									<div class="subitem level1">
+										<label class="control-label">余额</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">借方合计</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">贷方合计</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">会计分录</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active clearfix">
+							<div class="table-responsive mt15">
+								<table class="table table-condensed table-hover ztable02">
+									<thead>
+										<tr>
+											<th>行项目</th>
+											<th>摘要</th>
+											<th>会计科目</th>
+											<th>会计科目名称</th>
+											<th>借方金额</th>
+											<th>贷方金额</th>
+											<th>本位币金额</th>
+											<th>银行信息</th>
+											<th>开户行信息</th>
+											<th>成本中心</th>
+											<th>利润中心</th>
+											<th>...</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr onclick="window.location.href='展厅收款和开票-收款签收-会计凭证预览.html'">
+											<td>1</td>
+											<td>-</td>
+											<td></td>
+											<td>主营业务收入</td>
+											<td></td>
+											<td>5w</td>
+											<td>5w</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="###" data-toggle="tab">辅助核算</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active clearfix">
+							<div class="seardiv clearfix">
+								<div class="form-horizontal clearfix col4">
+									<div class="subitem level1">
+										<label class="control-label">现金流量</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">项目分期</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+									<div class="subitem level1">
+										<label class="control-label">房源</label>
+										<div class="control-cont hasicon">
+											<input type="text" class="form-control" placeholder="请输入" value="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

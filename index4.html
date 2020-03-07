@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/option.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+		<script>
+			$(function() {
+				$('#selgroup').on('change',function(){
+					var val = $(this).val();
+					window.location.href = val == 1 ? 'index.html' : val == 2 ? 'index2.html' : val == 3 ?'index3.html' : 'index4.html';
+				})
+			})
+		</script>
+	</head>
+
+	<body class="indexbg">
+		<div class="header">
+			<div class="toplogo" onclick="window.location.href='index.html'"></div>
+			<div class="topmenu2">
+				<div class="tit">营销佣金管理系统</div>
+			</div>
+			<ul class="topright">
+				<li class="popli"><span><span class="iconfont icon-topicon04"></span>操作指南</span>
+				</li>
+				<li class="popli"><span><span class="iconfont icon-topicon03"></span>常见问题</span>
+				</li>
+				<li data-toggle="modal" data-target="#gglist" class="mesli"><span><span class="iconfont icon-topicon05"></span>通知公告</span><i>999</i></li>
+				<li class="popli"><span><span class="iconfont icon-topicon02"></span>问题反馈</span>
+				</li>
+				<li class="userli"><span>【欢迎您，管理员】</span><a href="###" title="退出"><span class="iconfont icon-topicon01"></span></a></li>
+			</ul>
+		</div>
+		<div class="allmain imain clearfix">
+			<!--左侧 start-->
+			<div class="leftmenu">
+				<div class="contscorll mCustomScrollbar leftscrollbar">
+					<div class="leftarrow"><span class="larrow"></span></div>
+					<div class="lmlist">
+						<ul>
+							<li>
+								<a href="index.html" title="首页" class="active"><span class="iconfont icon-lfi042"></span><b>首页</b></a>
+							</li>
+							<li>
+								<a href="蓄客期.html" title="蓄客期"><span class="iconfont icon-lfi053"></span><b>蓄客期</b></a>
+							</li>
+							<li>
+								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
+							</li>
+							<li>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+							</li>
+							<li>
+								<a href="###" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+							</li>
+							<li>
+								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--左侧 end-->
+			<div class="fright clearfix">
+
+
+				<div class="pagetab clearfix">
+					<div class="pt-item">首页<button type="button" class="close"><span>&times;</span></button></div>
+				</div>
+				<div class="mynavtab01 clearfix">
+					<div class="indexlinkdiv clearfix">
+						<div class="col-xs-6">
+							<label>组织层级</label>
+							<select class="form-control" id="selgroup">
+								<option value="1">集团</option>
+								<option value="2">区域</option>
+								<option value="3" selected="selected">城市</option>
+								<option value="4">项目</option>
+							</select>
+						</div>
+						<div class="col-xs-6 text-right">
+							<label>更新日期</label>
+							<select class="form-control">
+								<option value="1">2019年12月</option>
+								<option value="2">2019年11月</option>
+								<option value="3">2019年10月</option>
+								<option value="4">2019年09月</option>
+							</select>
+						</div>
+					</div>
+					<div class="preview clearfix">
+						<div class="col-xs-4">
+							<div class="ptit">当年已发</div>
+							<div class="pleft"><i>6170.5</i>万元</div>
+							<div class="pright">同比<span class="fontred0">+2.3%</span></div>
+						</div>
+						<div class="col-xs-4">
+							<div class="ptit">当月已发</div>
+							<div class="pleft"><i>1560.8</i>万元</div>
+							<div class="pright">环比<span class="fontred0">+5.7%</span></div>
+						</div>
+						<div class="col-xs-4">
+							<div class="ptit">待发合计</div>
+							<div class="pleft"><i>1866.8</i>万元</div>
+							<div class="pright">环比<span class="fontgreen">-2.3%</span></div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-xs-6">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="###" data-toggle="tab">当月内部已发佣金分布</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active chartsdiv clearfix">
+									<div id="echartsdiv00" class="echdiv" style="width: 100%;height: 176px;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="###" data-toggle="tab">当月泛营销已发佣金分布</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active chartsdiv clearfix">
+									<div class="col-xs-6">
+										<div class="item clearfix">
+											<label class="col-xs-6 text-right">普通经纪人</label>
+											<div class="col-xs-6"><span>18.9</span>万元</div>
+											<label class="col-xs-6 text-right"></label>
+											<div class="col-xs-6 fontred0">+5.2%</div>
+									</div>
+									<div class="item clearfix">
+											<label class="col-xs-6 text-right">老业主</label>
+											<div class="col-xs-6"><span>48.9</span>万元</div>
+											<label class="col-xs-6 text-right"></label>
+											<div class="col-xs-6 fontred0">+5.2%</div>
+									</div>
+									<div class="item clearfix">
+											<label class="col-xs-6 text-right">员工</label>
+											<div class="col-xs-6"><span>28.9</span>万元</div>
+											<label class="col-xs-6 text-right"></label>
+											<div class="col-xs-6 fontgreen">-5.2%</div>
+									</div>
+									</div>
+									<div class="col-xs-6 pr0">
+										<div id="echartsdiv01" class="echdiv" style="width: 100%;height: 176px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="###" data-toggle="tab">当月中介机构已发佣金排名（Top3）</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active chartsdiv paimingdiv clearfix">
+									<div class="item paiming clearfix">
+										<div class="col-xs-2"><span class="iconfont icon-lfi063 fonty01"></span> <b>1</b></div>
+										<div class="col-xs-3">链家</div>
+										<div class="col-xs-4">70.2万元</div>
+										<div class="col-xs-3">+5.7%</div>
+									</div>
+									<div class="item paiming clearfix">
+										<div class="col-xs-2"><span class="iconfont icon-lfi063 fonty02"></span> <b>2</b></div>
+										<div class="col-xs-3">贝壳</div>
+										<div class="col-xs-4">70.2万元</div>
+										<div class="col-xs-3">+5.7%</div>
+									</div>
+									<div class="item paiming clearfix">
+										<div class="col-xs-2"><span class="iconfont icon-lfi063 fonty03"></span> <b>3</b></div>
+										<div class="col-xs-3">我爱我家</div>
+										<div class="col-xs-4">70.2万元</div>
+										<div class="col-xs-3">+5.7%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="###" data-toggle="tab">截止当月佣金池分布</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active chartsdiv clearfix">
+									<div class="info clearfix">
+										<div class="col-xs-4 pl0">本月新增<span>1866.8</span>万元</div>
+										<div class="col-xs-4 p0">本月已发<span>1866.8</span>万元</div>
+										<div class="col-xs-4 pr0">代发合计<span>1866.8</span>万元</div>
+									</div>
+									<div class="col-xs-6">
+										<div class="item clearfix">
+											<label class="col-xs-5 text-right pl0"><b>待发合计</b></label>
+											<div class="col-xs-7"><span>1886.8</span>万元</div>
+									</div>
+									<div class="item clearfix">
+											<label class="col-xs-5 text-right pl0">预留</label>
+											<div class="col-xs-7"><span>148.9</span>万元</div>
+									</div>
+									<div class="item clearfix">
+											<label class="col-xs-5 text-right pl0">奖惩</label>
+											<div class="col-xs-7"><span>148.9</span>万元</div>
+									</div>
+									<div class="item clearfix">
+											<label class="col-xs-5 text-right pl0">其他</label>
+											<div class="col-xs-7"><span>148.9</span>万元</div>
+									</div>
+									</div>
+									<div class="col-xs-6 pr0">
+										<div id="echartsdiv04" class="echdiv" style="width: 100%;height: 140px;"></div>
+									</div>
+								
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="###" data-toggle="tab">当年佣金发放趋势图</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active chartsdiv clearfix">
+									<div id="echartsdiv03" class="echdiv" style="width: 100%;height: 175px;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			
+			var echar00 = echarts.init(document.getElementById("echartsdiv00"));
+			echar00.setOption(option07);
+			var echar01 = echarts.init(document.getElementById("echartsdiv01"));
+			echar01.setOption(option08);
+			var echar03 = echarts.init(document.getElementById("echartsdiv03"));
+			echar03.setOption(option03);
+			var echar04 = echarts.init(document.getElementById("echartsdiv04"));
+			echar04.setOption(option04);
+		})
+	</script>
+</html>

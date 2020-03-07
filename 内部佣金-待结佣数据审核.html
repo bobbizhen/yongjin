@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/kendo.common.min.css" />
+		<link rel="stylesheet" href="css/kendo.rtl.min.css" />
+		<link rel="stylesheet" href="css/kendo.mobile.all.min.css" />
+		<link rel="stylesheet" href="css/kendo.silver.min.css" />
+		<link rel="stylesheet" href="css/style-kendo.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="js/kendo.all.min.js"></script>
+		<script type="text/javascript" src="js/customer.js"></script>
+
+		<script>
+
+			$(function() {
+				$("#grid").kendoGrid({
+// 　　　　　height: 500, // 表格高度 (单位px)
+        dataSource: {
+            data: [
+                { id: "xxx", a1: "xxx", a2: "xxx", a3: "xxx", a4: "xxx", a5: "xxx", a6: "xxx", a7: "xxx", a8: "xxx", a9: "xxx", a10: "xxx", a11: "xxx", a12: "xxx", a13: "xxx", a14: "xxx", a15: "xxx", a16: "xxx", a17: "xxx", a18: "xxx", a19: "xxx", a20: "xxx", a21: "xxx", a22: "xxx", a23: "xxx", a24: "xxx", },
+            ],
+            pageSize: 2        //定义分页每页几条数据
+        },
+        columns: [
+			{ field: "id",title:" ",template: "<input type='checkbox' id='#: id #' />",width:'50px' },
+            { field: "a1",title:"序号" },
+            { field: "a2",title:"项目名称" },
+            { field: "a3",title:"房源名称" },
+            { field: "a4",title:"签约日期" },
+            { field: "a5",title:"网签日期" },
+            { field: "a6",title:"签约单" },
+            { field: "a7",title:"成交总价" },
+            { field: "a8",title:"实收金额" },
+            { field: "a9",title:"回款比例(%)" },
+            { field: "a10",title:"一级渠道" },
+            { field: "a11",title:"二级渠道" },
+            { field: "a12",title:"付款方式" },
+            { field: "a13",title:"置业顾问" },
+            { field: "a14",title:"置业顾问2" },
+            { field: "a15",title:"跟进置业顾问" },
+            { field: "a16",title:"渠道顾问" },
+            { field: "a17",title:"渠道顾问2" },
+            { field: "a18",title:"客户姓名" },
+            { field: "a19",title:"品质审核审核结果" },
+            { field: "a20",title:"品质审核审核意见" },
+            { field: "a21",title:"按揭审核结果" },
+            { field: "a22",title:"按揭审核意见" },
+            { field: "a23",title:"风控审核结果" },
+            { field: "a24",title:"风控审核意见" },
+        ],
+        pageable: {        //表格分页
+            refresh: true, //刷新
+            // pageSizes: true, //打开按钮分页
+            // buttonCount: 5 //分页数量
+        },
+
+    });
+			})
+		</script>
+	</head>
+
+	<body class="indexbg">
+
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">添加便式</h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv">
+							<div class="form-group">
+								<label>请输入想要添加的便式</label>
+								<input type="text" class="form-control" placeholder="最多输入10个字符" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer text-center">
+						<button type="button" class="btn btn-danger1" id="saveit">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div class="inputdiv form-inline ml20">
+							<div class="form-group">
+								<label class="mr15"></label>
+								<input type="text" class="form-control mr15 w230px" placeholder="请输入" />
+								<button class="btn btn-primary">搜索</button>
+							</div>
+							<ul class="zlist01">
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+								<li><a href="###">XXXXXXXXXXXXXXXXX</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="toplogo" onclick="window.location.href='index.html'"></div>
+			<div class="topmenu2">
+				<div class="tit">营销佣金管理系统</div>
+			</div>
+			<ul class="topright">
+				<li class="popli"><span><span class="iconfont icon-topicon04"></span>操作指南</span>
+				</li>
+				<li class="popli"><span><span class="iconfont icon-topicon03"></span>常见问题</span>
+				</li>
+				<li data-toggle="modal" data-target="#gglist" class="mesli"><span><span class="iconfont icon-topicon05"></span>通知公告</span><i>999</i></li>
+				<li class="popli"><span><span class="iconfont icon-topicon02"></span>问题反馈</span>
+				</li>
+				<li class="userli"><span>【欢迎您，管理员】</span><a href="###" title="退出"><span class="iconfont icon-topicon01"></span></a></li>
+			</ul>
+		</div>
+		<div class="allmain imain clearfix">
+			<!--左侧 start-->
+			<div class="leftmenu">
+				<div class="contscorll mCustomScrollbar leftscrollbar">
+					<div class="leftarrow"><span class="larrow"></span></div>
+					<div class="lmlist">
+						<ul>
+							<li>
+								<a href="index.html" title="首页"><span class="iconfont icon-lfi042"></span><b>首页</b></a>
+							</li>
+							<li>
+								<a href="蓄客期.html" title="蓄客期" class="active"><span class="iconfont icon-lfi053"></span><b>蓄客期</b></a>
+							</li>
+							<li>
+								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
+							</li>
+							<li>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+							</li>
+							<li>
+								<a href="顺销期.html" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+							</li>
+							<li>
+								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--左侧 end-->
+			<div class="fright clearfix">
+				<div class="pagetab clearfix">
+					<div class="pt-item">待结佣数据审核<button type="button" class="close"><span>&times;</span></button></div>
+				</div>
+				<div class="mynavtab01 clearfix">
+					<div class="seardiv clearfix">
+						<div class="form-horizontal clearfix col3">
+							<div class="subitem level1">
+								<label class="control-label">项目名称</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+							<div class="subitem level1">
+								<label class="control-label">签约日期</label>
+								<div class="control-cont hasdate">
+									<input type="text" class="form-control" placeholder="请输入" />
+								</div>
+							</div>
+							<div class="subitem level1">
+								<label class="control-label">网签日期</label>
+								<div class="control-cont hasdate">
+									<input type="text" class="form-control" placeholder="请输入" />
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">审核类型</label>
+								<div class="control-cont">
+									<select class="form-control"></select>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">审核状态</label>
+								<div class="control-cont">
+									<select class="form-control"></select>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">签约单状态</label>
+								<div class="control-cont">
+									<select class="form-control"></select>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">房源名称</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">签约单号</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+						</div>
+						<div class="seardiv-footer">
+							<div class="savediv"><span class="font-bold">已保存搜索条件</span><span class="savelist"><span>我的常用</span><span>北京</span></span><span
+								 class="add glyphicon glyphicon-plus" data-target="#myModal1" data-toggle="modal"></span></div>
+							<div class="btndiv"><button type="button" class="btn btn-link searopt">高级搜索</button><button type="button" class="btn btn-gray">清空</button><button
+								 type="button" class="btn btn-danger1">搜索</button></div>
+						</div>
+
+					</div>
+					<div class="searlistdiv">
+						<div class="searlist-title clearfix">
+							<div class="btndiv">
+								<div class="piliang2">
+									<label><span class="fontred0">*</span>审核类型<select class="form-control">
+											<option value=""></option>
+										</select></label>
+									</div><button type="button" class="btn btn-gray">审核通过</button><button type="button" class="btn btn-danger1">审核未通过</button>
+							</div>
+						</div>
+						<div id="grid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
