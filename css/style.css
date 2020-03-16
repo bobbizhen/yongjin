@@ -1323,6 +1323,9 @@ body a:active, a:visited, a:focus {
 	float: left;
 	position: relative;
 	font-size: 1.4rem;
+	cursor: pointer;
+	border-bottom:1px solid #ffffff;
+	/* box-shadow: 0px -1px 5px #cccccc; */
 }
 .pagetab .pt-item .close {
 	position: absolute;
@@ -1338,6 +1341,11 @@ body a:active, a:visited, a:focus {
 }
 .pagetab .pt-item:hover .close {
 	display: block;
+}
+.pagetab .pt-item.old {
+	color: #999999;
+	background: #fcfbf9;
+	box-shadow: 0px 0px 1px #999;
 }
 .prog_stepall {
 	padding-bottom:10px;

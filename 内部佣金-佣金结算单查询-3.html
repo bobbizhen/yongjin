@@ -23,102 +23,45 @@
 		<script>
 
 			$(function() {
-					$(".grid01").kendoGrid({
+					$("#grid").kendoGrid({
 						scrollable:true,
-						resizable:true,
 						dataSource: {
 							data: [
-								{ id: "1", 
-								a1: "1",
-								a21: "xxx",
-								a22: "xxx",
-								a23: "xxx",
-								a3: "xxx",
-								a4: "xxx",
-								a5: "xxx",
-								a6: "xxx",
-								a7: "xxx",
-								a8: "xxx",
-								a9: "xxx",
-								a10: "xxx",
-								a11: "xxx",
-								a12: "xxx",
-								a13: "xxx",
-								a14: "xxx",
-								a15: "xxx",
-								a16: "",
-								a17: "",
-								a18: "xxx",
-								a19: "",
-								a20: "",
-								a21: "",
-								a22: "",
-								a23: "",
-								a24: "",
-								a25: "",
-								a26: "",
-								a27: "xxx",
-								},
-								
+								{ id: "1", a1: "200000000001", a2: "使馆壹号院", a3: "融创集团股份有限公司", a4: "01内部员工结佣",a5:"2020-01",a6:"营销部",a61:"5w",a62:"1w",a63:"审批通过",a7:"1000000001",a8:"2019/11/27 09：00：30",a9:"张三",a10:"2019/11/28 09：00：30" },
+								{ id: "2", a1: "200000000001", a2: "使馆壹号院", a3: "融创集团股份有限公司", a4: "01内部员工结佣",a5:"2020-01",a6:"营销部",a61:"5w",a62:"1w",a63:"审批通过",a7:"1000000001",a8:"2019/11/27 09：00：30",a9:"张三",a10:"2019/11/28 09：00：30" },
 								],
 							pageSize: 2,
 						},
 						columns: [
-							{ field: "a1", title: "序号",width:'50px'},
-							{ field: "a21", title: "法人公司",width:'100px'},
-							{ field: "a22", title: "展厅名称",width:'100px'},
-							{ field: "a23", title: "项目",width:'100px'},
-							{ field: "a3", title: "房源",width:'100px'},
-							{ field: "a6", title: "销售单据编号",width:'100px'},
-							{ field: "a7", title: "结佣对象",width:'100px' },
-							{ field: "a8", title: "结佣人员",width:'100px' },
-							{ field: "a9", title: "是否检查通过",width:'100px' },
-							{ field: "a10", title: "问题描述",width:'100px' },
-						],
+							{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px' },
+							{ field: "a1", title: "佣金结算单", template:"<a href='内部佣金-佣金结算单明细.html' class='fontlink'>#:a1 #</a>",width:"120px" },
+							{ field: "a2",title:"项目" },
+							{ field: "a3",title:"公司代码",width:"160px" },
+							{ field: "a4",title:"结佣类型" },
+							{ field: "a5",title:"结佣月份" },
+							{ field: "a6",title:"费用归属成本中心" },
+							{ field: "a61",title:"应放佣金" },
+							{ field: "a62",title:"已发佣金" },
+							{ field: "a63",title:"结算单状态" },
+							{ field: "a7",title:"BPM审批单号" },
+							{ field: "a8",title:"创建时间" },
+							{ field: "a9",title:"创建人" },
+							{ field: "a10",title:"审批时间" },
+							],
 						pageable: {
 							refresh: true, //刷新
 						},
 					});
-					})
-					$(function() {
-					$(".grid02").kendoGrid({
-						scrollable:true,
-						resizable:true,
-						dataSource: {
-							data: [
-								{ 
-								a1: "xxx",
-								a2: "xxx",
-								a3: "xxx",
-								},
-								
-								],
-							pageSize: 2,
-						},
-						columns: [
-							{ field: "a1", title: "序号",width:'50px' },
-							{ field: "a2", title: "试算检查清单" },
-							{ field: "a3", title: "是否检查通过" },
-		
-						],
-						pageable: {
-							refresh: true, //刷新
-						},
-					});
+
 				})
 			</script>
-		<script>
-			$(function() {
-				$('#title').on('click',function(){
-					$('#tit_cont').slideToggle();
-					$(this).find('span').toggleClass('glyphicon-menu-up');
-				})
-			})
-		</script>
+		<script id="template01" type="text/x-kendo-template">
+			<a href='内部佣金-地产-佣金结算2.html'></a>
+			</script>
 	</head>
 
 	<body class="indexbg">
-
+		
 		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">
@@ -200,13 +143,13 @@
 								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
 							</li>
 							<li>
-								<a href="开盘后次月.html" title="开盘后次月" class="active"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
 							</li>
 							<li>
 								<a href="顺销期.html" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
 							</li>
 							<li>
-								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
+								<a href="交房.html" title="交房" class="active"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
 							</li>
 						</ul>
 					</div>
@@ -214,62 +157,73 @@
 			</div>
 			<!--左侧 end-->
 			<div class="fright clearfix">
-
-
 				<div class="pagetab clearfix">
-					<div class="pt-item ml5"><a href="开盘后次月.html" class="fontdark">开盘后次月</a> / 佣金计算<button type="button" class="close"><span>&times;</span></button></div>
+					<div class="pt-item ml5"><a href="交房.html" class="fontdark">交房</a> / 佣金结算单查询<button type="button" class="close"><span>&times;</span></button></div>
 				</div>
 				<div class="mynavtab01 clearfix">
-					<div class="prog_stepall clearfix">
-						<div class="prog_step">
-							<div class="stepall finish">
-								<div class="step"><span>1</span></div>
-								确定佣金计算范围
-							</div>
-							<div class="stepall finish">
-								<div class="step"><span>2</span></div>
-								试算检查
-							</div>
-							<div class="stepall">
-								<div class="step"><span>3</span></div>
-								生成佣金计算单
-							</div>
-						</div>
-					</div>
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="###">试算检查结果</a></li>
-					</ul>
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane active clearfix">
-							<div class="searlistdiv">
-								<div class="searlist-title clearfix">
-									<div class="mt5 pull-left">试算检查结果：共 <b>23</b> 条签约单，通过 <b class="fontgreen">20</b> 条，未通过 <b class="fontred0">3</b>
-										条</div>
-									<div class="btndiv">
-										<button type="button" class="btn btn-gray" onclick="">再次检查</button><button type="button" class="btn btn-danger1"
-										 onclick="window.location.href='内部佣金-佣金计算3.html'">下一步</button>
-									</div>
+					<div class="seardiv clearfix">
+						<div class="form-horizontal clearfix col4">
+							<div class="subitem level1">
+								<label class="control-label"><span class="fontred0">*</span>业务板块</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
 								</div>
-
-								<div class="grid01"></div>
 							</div>
+							<div class="subitem level1">
+								<label class="control-label"><span class="fontred0">*</span>项目/公司代码</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+							<div class="subitem level1">
+								<label class="control-label">结佣类型</label>
+								<div class="control-cont">
+									<select class="form-control">
+										<option value="">内部结佣</option>
+									</select>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">佣金结算单</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">结算单状态</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" value="链家" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+							<div class="subitem level2">
+								<label class="control-label">创建人</label>
+								<div class="control-cont hasicon">
+									<input type="text" class="form-control" placeholder="请输入" />
+									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
+								</div>
+							</div>
+						</div>
+						<div class="seardiv-footer">
+							<div class="savediv"><span class="font-bold">已保存搜索条件</span><span class="savelist"><span>我的常用</span><span>北京</span></span><span
+								 class="add glyphicon glyphicon-plus" data-target="#myModal1" data-toggle="modal"></span></div>
+							<div class="btndiv"><button type="button" class="btn btn-link searopt">高级搜索</button><button type="button" class="btn btn-gray">清空</button><button
+								 type="button" class="btn btn-danger1">搜索</button></div>
 						</div>
 					</div>
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="###" id="title"><span class="glyphicon glyphicon-menu-down"></span> 试算检查清单</a></li>
-					</ul>
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div class="tab-pane active clearfix" id="tit_cont">
-							<div class="searlistdiv">
-								<div class="grid02"></div>
+					<div class="searlistdiv">
+						<div class="searlist-title clearfix">
+							<div class="btndiv">
+								<button type="button" class="btn btn-danger1" onclick="">合并审批</button>
 							</div>
 						</div>
+						<div id="grid"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-
 </html>

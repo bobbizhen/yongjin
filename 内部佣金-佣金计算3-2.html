@@ -23,159 +23,163 @@
 		<script>
 
 			$(function() {
-					
-					$("#grid").kendoGrid({
+					$(".grid01").kendoGrid({
 						scrollable:true,
 						resizable:true,
 						dataSource: {
-							data: [{ 
-								id: "1", 
-								a2 : "xxxxxx",
-								a31 : "xxxxxxxxxxxx",
-								a32 : "xxxxxxxxx",
-								a4 : "xxxxxx",
-								a33 : "xxxxxx",
-								a5 : "xxxxxx",
-								a6 : "xxxxxx",
-								a7 : "xxxxxx",
-								a8 : "xxxxxx",
-								a9 : "xxxxxx",
-								a122 : "xxxxxx",
-								a12 : "xxxxxx",
-								a13 : "xxxxxx",
-								a14 : "xxxxxx",
-								a15 : "xxxxxx",
-								a16 : "xxxxxx",
-								a17 : "xxxxxx",
-								a18 : "xxxxxx",
-								a19 : "xxxxxx",
-								a191 : "xxxxxx",
-								a20 : "xxxxxx",
-								a21 : "xxxxxx",
-								a22 : "xxxxxx",
-								
+							data: [
+								{ id: "1", 
+								a1: "1",
+								a21: "xxx",
+								a22: "xxx",
+								a24: "xxx",
+								a23: "xxx",
+								a3: "xxx",
+								a4: "xxx",
+								a5: "xxx",
+								a6: "xxx",
+								a7: "xxx",
+								a8: "xxx",
+								a9: "xxx",
+								a10: "xxx",
+								a11: "xxx",
+								a12: "xxx",
+								a13: "xxx",
+								a14: "xxx",
+								a15: "xxx",
+								a16: "",
+								a17: "",
+								a18: "xxx",
+								a19: "",
+								a20: "",
+								a21: "",
+								a22: "",
+								a23: "",
+								a24: "",
+								a25: "",
+								a26: "",
+								a27: "xxx",
 								},
+								
 								],
 							pageSize: 2,
 						},
 						columns: [
-							{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px',locked: true,lockable: false, },
-							{ field: "a2", title: "序号",width:'50px',locked: true, },
-							{ field: "a31", title: "法人公司" ,width:'100px',locked: true,},
-							{ field: "a32", title: "展厅名称" ,width:'100px',locked: true,},
-							{ field: "a4", title: "佣金计算单编号" ,width:'100px',locked: true, },
-							{ field: "a33", title: "项目名称" ,width:'100px',locked: true, },
-							{ field: "a5", title: "房源名称" ,width:'100px',locked: true, },
-							{ field: "a6", title: "订单类型" ,width:'100px',locked: true, },
-							{ field: "a7", title: "订单编号" ,width:'100px',locked: true, },
-							{ field: "a8", title: "结佣对象类型" ,width:'100px' },
-							{ field: "a9", title: "结佣人员" ,width:'100px' },
-							{ field: "a112", title: "原结佣人员" ,width:'100px' },
-							{ field: "a12", title: "佣金类型" ,width:'100px' },
-							{ field: "a13", title: "已结佣金额"  ,width:'100px'},
-							{ field: "a14", title: "计算日期" ,width:'100px' },
-							{ field: "a15", title: "本次应发佣金金额" ,width:'100px' },
-							{ field: "a16", title: "本次计算佣金金额" ,width:'100px' },
-							{ field: "a17", title: "调整金额" ,width:'100px' },
-							{ field: "a18", title: "调整原因"  ,width:'100px'},
-							{ field: "a19", title: "拆分佣金金额" ,width:'100px' },
-							{ field: "a191", title: "拆分关联计算单" ,width:'100px' },
-							{ field: "a20", title: "因子项1-未销售顶底楼调整值<span class='fontred0'>*</span>",width:"180px" },
-							{ field: "a21", title: "因子项2调整值<span class='fontred0'>*</span>" ,width:'100px' },
-							{ field: "a22", title: "状态" ,width:'100px' },
-							],
+							{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px',locked: true, },
+							{ field: "a1", title: "序号",width:'50px',locked: true, },
+							{ field: "a21", title: "法人公司",width:'100px',locked: true, },
+							{ field: "a22", title: "展厅名称",width:'100px',locked: true, },
+							{ field: "a24", title: "佣金计算单编号",width:'100px',locked: true, },
+							{ field: "a23", title: "项目",width:'100px',locked: true, },
+							{ field: "a3", title: "房源名称",width:'100px',locked: true, },
+							{ field: "a4", title: "订单类型",width:'100px',locked: true, },
+							{ field: "a5", title: "订单编号",width:'100px',locked: true, },
+							{ field: "a6", title: "结佣对象类型",width:'100px' },
+							{ field: "a7", title: "结佣人员",width:'100px' },
+							{ field: "a8", title: "佣金类型",width:'100px' },
+							{ field: "a9", title: "已结佣金额",width:'100px' },
+							{ field: "a10", title: "本次应发佣金金额",width:'100px' },
+							{ field: "a11", title: "本次计算佣金金额",width:'100px' },
+							{ field: "a12", title: "调整金额",width:'100px' },
+							{ field: "a13", title: "调整原因",width:'100px' },
+							{ field: "a14", title: "因子项1-未销售顶底楼调整值<span class='fontred0'>*</span>'",width:'100px' },
+							{ field: "a15", title: "因子项2调整值<span class='fontred0'>*</span>'",width:'100px' },
+							{ field: "a16", title: "状态",width:'100px' },
+						],
 						pageable: {
 							refresh: true, //刷新
 						},
 					});
-	})
-	$(function() {
-		var options = {
-			scrollable:true,
-			resizable:true,
-			dataSource: {
-				data: [{ 
-					id: "1", 
-					a1: 'xxx',
-					a2: 'xxx',
-					a3: 'xxx',
-					a4: 'xxx',
-					a5: 'xxx',
-					a6: 'xxx',
-					a7: 'xxx',
-					a8: 'xxx',
-					a9: 'xxx',
-					a10:'xxx',
-					a11:'xxx',
-					a12:'xxx',
-					a13:'xxx',
-					a14:'xxx',
-					a15:'xxx',
-					a16:'xxx',
-					a17:'xxx',
-					a18:'xxx',
-					a19:'xxx',
-					a20:'xxx',
-					a21:'xxx',
-					a22:'xxx',
-					a23:'xxx',
-					a24:'xxx',
-					a25:'xxx',
-					a26:'xxx',
-					},
-					],
-				pageSize: 2,
-			},
-			columns: [
-				{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px' },
-				{ field: "a1", title: "序号",width:'50px' },
-				{ field: "a2", title: "法人公司",width:'100px' },
-				],
-			pageable: {
-				refresh: true, //刷新
-			},
-		};
+					})
+					$(function() {
+					$(".grid02").kendoGrid({
+						scrollable:true,
+						resizable:true,
+						dataSource: {
+							data: [
+								{ id: "1", 
+								a1: "xxx",
+								a2: "xxx",
+								a3: "xxx",
+								a4: "xxx",
+								a5: "xxx",
+								a6: "xxx",
+								a7: "xxx",
+								a8: "xxx",
+								a9: "xxx",
+								a10: "xxx",
+								a11: "xxx",
+								a12: "xxx",
+								a13: "xxx",
+								a14: "xxx",
+								a15: "xxx",
+								a16: "xxx",
+								a17: "xxx",
+								a18: "xxx",
+								a19: "xxx",
+								a20: "xxx",
+								a21: "xxx",
+								a22: "xxx",
+								a23: "xxx",
+								a24: "xxx",
+								a25: "xxx",
+								a26: "xxx",
+								a27: "xxx",
+								a28: "xxx",
+								a29: "xxx",
+								a30: "xxx",
+								},
+								
+								],
+							pageSize: 2,
+						},
+						columns: [
+							{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px', },
+							{ field: "a2", title: "序号",width:'50px' },
 		
-		$("#grid2").kendoGrid(options)
-		var grid2 = $("#grid2").data("kendoGrid");
-		var options2 = {
-		            columns: [
-				{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px',locked: true, },
-				{ field: "a1", title: "序号",width:'50px',locked: true, },
-				{ field: "a2", title: "法人公司",width:'100px',locked: true, },
-				{ field: "a3", title: "展厅名称",width:'100px',locked: true, },
-				{ field: "a4", title: "项目名称",width:'100px',locked: true, },
-				{ field: "a5", title: "房源名称",width:'100px' ,locked: true,},
-				{ field: "a6", title: "销售单据日期",width:'100px',locked: true, },
-				{ field: "a7", title: "销售单据类型",width:'100px',locked: true, },
-				{ field: "a8", title: "销售单据编号",width:'100px',locked: true, },
-				{ field: "a9", title: "成交总价",width:'100px' },
-				{ field: "a10", title: "已收房款金额",width:'100px' },
-				{ field: "a11", title: "装修总价",width:'100px' },
-				{ field: "a12", title: "已收装修款",width:'100px' },
-				{ field: "a13", title: "采购总价",width:'100px' },
-				{ field: "a14", title: "已收采购款",width:'100px' },
-				{ field: "a15", title: "一级渠道",width:'100px' },
-				{ field: "a16", title: "二级渠道",width:'100px' },
-				{ field: "a17", title: "付款方式",width:'100px' },
-				{ field: "a18", title: "置业顾问",width:'100px' },
-				{ field: "a19", title: "本次应发佣金",width:'100px' },
-				{ field: "a20", title: "预留佣金",width:'100px' },
-				{ field: "a21", title: "销售主管",width:'100px' },
-				{ field: "a22", title: "本次应发佣金",width:'100px' },
-				{ field: "a23", title: "预留佣金",width:'100px' },
-				{ field: "a24", title: "销售主管",width:'100px' },
-				{ field: "a25", title: "本次应发佣金",width:'100px' },
-				{ field: "a26", title: "预留佣金",width:'100px' },
-				],
-		    };
-
-	$('a[href="#tab02"]').on('shown.bs.tab', function (e) {
-		 grid2.setOptions(options2);
-	})
-})
+						],
+						pageable: {
+							refresh: true, //刷新
+						},
+					});
+					var grid2 = $(".grid02").data("kendoGrid");
+					var options2 = {
+						columns: [
+							{ field: "id",title:"全选",template: "<input type='checkbox' id='#: id #' />",width:'50px',locked: true, },
+							{ field: "a1", title: "序号",width:'50px',locked: true, },
+							{ field: "a2", title: "法人公司",width:'100px',locked: true, },
+							{ field: "a3", title: "展厅名称",width:'100px',locked: true, },
+							{ field: "a4", title: "项目名称",width:'100px',locked: true, },
+							{ field: "a5", title: "房源名称",width:'100px',locked: true, },
+							{ field: "a6", title: "销售单据日期",width:'100px',locked: true, },
+							{ field: "a7", title: "销售单据类型",width:'100px',locked: true, },
+							{ field: "a8", title: "销售单据编号",width:'100px',locked: true, },
+							{ field: "a9", title: "成交总价",width:'100px' },
+							{ field: "a10", title: "已收房款金额",width:'100px' },
+							{ field: "a11", title: "装修总价",width:'100px' },
+							{ field: "a12", title: "已收装修款",width:'100px' },
+							{ field: "a13", title: "采购总价",width:'100px' },
+							{ field: "a14", title: "已收采购款",width:'100px' },
+							{ field: "a15", title: "一级渠道",width:'100px' },
+							{ field: "a16", title: "二级渠道",width:'100px' },
+							{ field: "a17", title: "付款方式",width:'100px' },
+							{ field: "a18", title: "置业顾问",width:'100px' },
+							{ field: "a19", title: "本次应发佣金",width:'100px' },
+							{ field: "a20", title: "预留佣金",width:'100px' },
+							{ field: "a21", title: "销售主管",width:'100px' },
+							{ field: "a22", title: "本次应发佣金",width:'100px' },
+							{ field: "a23", title: "预留佣金",width:'100px' },
+							{ field: "a24", title: "销售主管",width:'100px' },
+							{ field: "a25", title: "本次应发佣金",width:'100px' },
+							{ field: "a26", title: "预留佣金",width:'100px' },
+		
+						],};
+						
+					$('a[href="#tab02"]').on('shown.bs.tab', function (e) {
+						 grid2.setOptions(options2);
+					})
+				})
 			</script>
-
 	</head>
 
 	<body class="indexbg">
@@ -261,10 +265,10 @@
 								<a href="开盘.html" title="开盘"><span class="iconfont icon-lfi040"></span><b>开盘</b></a>
 							</li>
 							<li>
-								<a href="开盘后次月.html" title="开盘后次月" class="active"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
+								<a href="开盘后次月.html" title="开盘后次月"><span class="iconfont icon-lfi062"></span><b>开盘后次月</b></a>
 							</li>
 							<li>
-								<a href="顺销期.html" title="顺销期"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
+								<a href="顺销期.html" title="顺销期" class="active"><span class="iconfont icon-lfi041"></span><b>顺销期</b></a>
 							</li>
 							<li>
 								<a href="交房.html" title="交房"><span class="iconfont icon-lfi034"></span><b>交房</b></a>
@@ -276,10 +280,25 @@
 			<!--左侧 end-->
 			<div class="fright clearfix">
 				<div class="pagetab clearfix">
-					<div class="pt-item ml5"><a href="开盘后次月.html" class="fontdark">开盘后次月</a> / 佣金计算单查询<button type="button" class="close"><span>&times;</span></button></div>
+					<div class="pt-item ml5"><a href="顺销期.html" class="fontdark">顺销期</a> / 佣金计算<button type="button" class="close"><span>&times;</span></button></div>
 				</div>
 				<div class="mynavtab01 clearfix">
-
+					<div class="prog_stepall clearfix">
+						<div class="prog_step">
+							<div class="stepall finish">
+								<div class="step"><span>1</span></div>
+								确定佣金计算范围
+							</div>
+							<div class="stepall finish">
+								<div class="step"><span>2</span></div>
+								试算检查
+							</div>
+							<div class="stepall finish">
+								<div class="step"><span>3</span></div>
+								生成佣金计算单
+							</div>
+						</div>
+					</div>
 					<div class="seardiv clearfix">
 						<div class="form-horizontal clearfix col4">
 							<div class="subitem level1">
@@ -292,21 +311,21 @@
 							<div class="subitem level1">
 								<label class="control-label"><span class="fontred0">*</span>法人公司</label>
 								<div class="control-cont hasicon">
-									<input type="text" class="form-control" placeholder="请输入" />
+									<input type="text" class="form-control" placeholder="请输入" value="当业务板块是02文旅展厅或03代理公司时显示/且必填" />
 									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
 								</div>
 							</div>
 							<div class="subitem level1">
 								<label class="control-label">展厅名称</label>
 								<div class="control-cont hasicon">
-									<input type="text" class="form-control" placeholder="请输入" />
+									<input type="text" class="form-control" placeholder="请输入" value="当业务板块是02文旅展厅或03代理公司时显示" />
 									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
 								</div>
 							</div>
 							<div class="subitem level1">
 								<label class="control-label"><span class="fontred0">*</span>项目</label>
 								<div class="control-cont hasicon">
-									<input type="text" class="form-control" placeholder="请输入" />
+									<input type="text" class="form-control" placeholder="请输入" value="01-地产项目时必填" />
 									<span class="zicon glyphicon glyphicon-list" data-target="#myModal2" data-toggle="modal"></span>
 								</div>
 							</div>
@@ -325,12 +344,6 @@
 								</div>
 							</div>
 							<div class="subitem level2">
-								<label class="control-label">计算日期</label>
-								<div class="control-cont hasdate">
-									<input type="text" class="form-control" placeholder="请输入" />
-								</div>
-							</div>
-							<div class="subitem level2">
 								<label class="control-label">结佣对象</label>
 								<div class="control-cont hasicon">
 									<input type="text" class="form-control" placeholder="请输入" value="可多选，置业顾问。。。" />
@@ -339,29 +352,19 @@
 							</div>
 							<div class="subitem level2">
 								<label class="control-label">计算单类型</label>
-								<div class="control-cont">
-									<select class="form-control">
-										<option value=""></option>
-									</select>
+								<div class="control-cont hasicon">
+									<select name="" id="" class="form-control"></select>
 								</div>
 							</div>
 							<div class="subitem level2">
 								<label class="control-label">子类型</label>
-								<div class="control-cont">
-									<select class="form-control">
-										<option value=""></option>
-									</select>
+								<div class="control-cont hasicon">
+									<select name="" id="" class="form-control"></select>
 								</div>
 							</div>
-							<div class="subitem level2">
-								<label class="control-label">计算单状态</label>
-								<div class="control-cont">
-									<select class="form-control">
-										<option value=""></option>
-									</select>
-								</div>
-							</div>
+
 						</div>
+
 						<div class="seardiv-footer">
 							<div class="savediv"><span class="font-bold">已保存搜索条件</span><span class="savelist"><span>我的常用</span><span>北京</span></span><span
 								 class="add glyphicon glyphicon-plus" data-target="#myModal1" data-toggle="modal"></span></div>
@@ -372,7 +375,7 @@
 
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#tab01" data-toggle="tab">佣金计算详单</a></li>
-						<li><a href="#tab02" data-toggle="tab">房源汇总视图</a></li>
+						<li><a href="#tab02" data-toggle="tab">佣金计算房源汇总</a></li>
 					</ul>
 					<!-- Tab panes -->
 					<div class="tab-content">
@@ -382,18 +385,16 @@
 									<div class="btndiv">
 										<button type="button" class="btn btn-gray" onclick="">编辑</button><button type="button" class="btn btn-gray"
 										 onclick="">拆分</button><button type="button" class="btn btn-gray" onclick="">保存</button><button type="button"
-										 class="btn btn-gray" onclick="">确认</button><button type="button" class="btn btn-gray" onclick="">关闭</button><button
-										 type="button" class="btn btn-gray" onclick="">计算过程</button><button type="button" class="btn btn-gray"
-										 onclick="window.location.href='内部佣金-奖惩计算单.html'">新建奖惩计算单</button><button type="button" class="btn btn-danger1"
-										 onclick="window.location.href='内部佣金-佣金结算单创建.html'">新建结算单</button>
+										 class="btn btn-gray" onclick="">关闭</button><button type="button" class="btn btn-gray" onclick="">确认</button><button
+										 type="button" class="btn btn-danger1" onclick="window.location.href='内部佣金-计算过程.html'">计算过程</button>
 									</div>
 								</div>
-								<div id="grid"></div>
+								<div class="grid01"></div>
 							</div>
 						</div>
 						<div class="tab-pane clearfix" id="tab02">
 							<div class="searlistdiv">
-								<div id="grid2"></div>
+								<div class="grid02"></div>
 							</div>
 						</div>
 					</div>
